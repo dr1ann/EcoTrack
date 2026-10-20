@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style
+        name="Base.Theme.EcoTrack2"
+        parent="Theme.Material3.Light.NoActionBar">
+        <item
+            name="colorPrimary">@color/forest</item>
+        <item
+            name="colorOnPrimary">@color/white</item>
+        <item
+            name="colorPrimaryContainer">@color/mint</item>
+        <item
+            name="colorOnPrimaryContainer">@color/forest</item>
+        <item
+            name="colorSecondary">@color/forest</item>
+        <item
+            name="colorSecondaryContainer">@color/mint</item>
+        <item
+            name="colorOnSecondaryContainer">@color/forest</item>
+        <item
+            name="colorSurface">@color/paper</item>
+        <item
+            name="colorSurfaceContainer">@color/paper</item>
+        <item
+            name="colorSurfaceContainerLow">@color/paper</item>
+        <item
+            name="colorSurfaceContainerHigh">@color/white</item>
+        <item
+            name="bottomSheetDialogTheme">@style/ThemeOverlay.EcoTrack.BottomSheet</item>
+        <item
+            name="colorOnSurface">@color/ink</item>
+        <item
+            name="android:colorBackground">@color/paper</item>
+        <item
+            name="android:fontFamily">sans</item>
+        <item
+            name="android:windowLightStatusBar">true</item>
+    </style>
+    <style
+        name="Theme.EcoTrack2"
+        parent="Base.Theme.EcoTrack2" />
+    <style
+        name="Heading">
+        <item
+            name="android:textColor">@color/ink</item>
+        <item
+            name="android:textSize">24sp</item>
+        <item
+            name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style
+        name="Body">
+        <item
+            name="android:textColor">@color/muted</item>
+        <item
+            name="android:textSize">14sp</item>
+    </style>
+    <style
+        name="Card"
+        parent="Widget.Material3.CardView.Elevated">
+        <item
+            name="cardBackgroundColor">@color/white</item>
+        <item
+            name="cardCornerRadius">20dp</item>
+        <item
+            name="cardElevation">0dp</item>
+        <item
+            name="strokeColor">@color/line</item>
+        <item
+            name="strokeWidth">1dp</item>
+    </style>
+    <style
+        name="CategoryChoice">
+        <item
+            name="android:button">@null</item>
+        <item
+            name="android:background">@drawable/category_choice_background</item>
+        <item
+            name="android:layout_marginEnd">8dp</item>
+        <item
+            name="android:paddingStart">16dp</item>
+        <item
+            name="android:paddingEnd">16dp</item>
+        <item
+            name="android:gravity">center</item>
+        <item
+            name="android:textColor">@color/category_text</item>
+        <item
+            name="android:textSize">13sp</item>
+        <item
+            name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style
+        name="TextAppearance.EcoTrack.Toolbar"
+        parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item
+            name="android:textSize">22sp</item>
+        <item
+            name="android:fontFamily">sans-serif-medium</item>
+        <item
+            name="android:textColor">@color/forest</item>
+    </style>
+    <style
+        name="TextAppearance.EcoTrack.Section"
+        parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item
+            name="android:textSize">17sp</item>
+        <item
+            name="android:fontFamily">sans-serif-medium</item>
+        <item
+            name="android:textColor">@color/ink</item>
+    </style>
+    <style
+        name="TextAppearance.EcoTrack.Subtitle"
+        parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item
+            name="android:textSize">12sp</item>
+        <item
+            name="android:textColor">@color/muted</item>
+    </style>
+    <style
+        name="ThemeOverlay.EcoTrack.BottomSheet"
+        parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item
+            name="colorSurface">@color/paper</item>
+        <item
+            name="colorSurfaceContainerLow">@color/paper</item>
+    </style>
+    <style
+        name="StatusOption">
+        <item
+            name="android:background">@drawable/bg_status_option</item>
+        <item
+            name="android:layout_marginBottom">8dp</item>
+        <item
+            name="android:paddingStart">12dp</item>
+        <item
+            name="android:paddingEnd">12dp</item>
+        <item
+            name="android:textSize">14sp</item>
+        <item
+            name="android:textColor">@color/ink</item>
+        <item
+            name="android:buttonTint">@color/forest</item>
+    </style>
+    <style name="Widget.EcoTrack.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/bg_navigation</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemIconGravity">start</item>
+        <item name="itemGravity">center</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="iconLabelHorizontalSpacing">8dp</item>
+        <item name="itemPaddingTop">0dp</item>
+        <item name="itemPaddingBottom">0dp</item>
+        <item name="itemIconTint">@color/bottom_navigation_tint</item>
+        <item name="itemTextColor">@color/bottom_navigation_tint</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemTextAppearanceActiveBoldEnabled">false</item>
+        <item name="horizontalItemTextAppearanceActive">@style/TextAppearance.EcoTrack.Navigation</item>
+        <item name="horizontalItemTextAppearanceInactive">@style/TextAppearance.EcoTrack.Navigation</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.EcoTrack.Navigation</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.EcoTrack.Navigation</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.EcoTrack.NavigationIndicator</item>
+    </style>
+    <style name="TextAppearance.EcoTrack.Navigation" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Widget.EcoTrack.NavigationIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/mint</item>
+        <item name="expandedWidth">156dp</item>
+        <item name="expandedHeight">48dp</item>
+        <item name="expandedMarginHorizontal">0dp</item>
+        <item name="expandedActiveIndicatorPaddingStart">8dp</item>
+        <item name="expandedActiveIndicatorPaddingEnd">8dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.EcoTrack.NavigationIndicator</item>
+    </style>
+    <style name="ShapeAppearance.EcoTrack.NavigationIndicator" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+</resources>

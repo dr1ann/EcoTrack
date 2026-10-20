@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/paper"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/searchToolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:title=""
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeHero"
+        style="@style/Card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="6dp"
+        app:cardBackgroundColor="@color/forest"
+        app:strokeWidth="0dp"
+        app:layout_constraintTop_toBottomOf="@id/searchToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="YOUR DAILY DOSE OF GOOD"
+                        android:textColor="@color/on_forest"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Small habits. Big impact."
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvHomeProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/on_forest"
+                android:textSize="12sp"
+                tools:text="3 of 15 challenges completed" />
+            <ProgressBar
+                android:id="@+id/homeProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="6dp"
+                android:max="15"
+                android:progressTint="@color/on_forest"
+                android:progressBackgroundTint="#51826B"
+                tools:progress="3" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/filterToolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:title="Challenges"
+        app:titleTextColor="@color/forest"
+        app:layout_constraintTop_toBottomOf="@id/homeHero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:subtitle="All statuses"
+        tools:menu="@menu/filter_menu"
+        app:titleTextAppearance="@style/TextAppearance.EcoTrack.Section"
+        app:subtitleTextAppearance="@style/TextAppearance.EcoTrack.Subtitle" />
+
+    <HorizontalScrollView
+        android:id="@+id/categoryScroll"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/filterToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <RadioGroup
+            android:id="@+id/categoryGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:checkedButton="@id/categoryAll">
+            <RadioButton
+                android:id="@+id/categoryAll"
+                style="@style/CategoryChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="All" />
+            <RadioButton
+                android:id="@+id/categoryWaste"
+                style="@style/CategoryChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Waste Reduction" />
+            <RadioButton
+                android:id="@+id/categoryEnergy"
+                style="@style/CategoryChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Energy Saving" />
+            <RadioButton
+                android:id="@+id/categoryWater"
+                style="@style/CategoryChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Water Conservation" />
+            <RadioButton
+                android:id="@+id/categoryLiving"
+                style="@style/CategoryChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Sustainable Living" />
+            <RadioButton
+                android:id="@+id/categoryCommunity"
+                style="@style/CategoryChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Community Action" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/categoryScroll"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerChallenges"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/challenge_row"
+            tools:itemCount="4"
+            android:paddingTop="4dp" />
+        <LinearLayout
+            android:id="@+id/emptyState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_leaf"
+                android:importantForAccessibility="no" />
+            <TextView
+                android:id="@+id/tvEmpty"
+                style="@style/Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No challenges match your filters"
+                android:textSize="20sp"
+                android:gravity="center" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetFilters"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Reset filters" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/Widget.EcoTrack.BottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintWidth_max="328dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/main_navigation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

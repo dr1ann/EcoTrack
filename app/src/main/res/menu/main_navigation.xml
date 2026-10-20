@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navChallenges"
+        android:title="Challenges"
+        android:icon="@drawable/ic_leaf" />
+    <item
+        android:id="@+id/navAchievements"
+        android:title="Achievements"
+        android:icon="@drawable/ic_badge" />
+</menu>
